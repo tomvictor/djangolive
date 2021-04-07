@@ -1,0 +1,11 @@
+from django.db import models
+
+# Create your models here.
+
+
+class CoreModel(models.Model):
+    timestamp = models.DateTimeField(auto_now_add=True)
+    last_updated = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        abstract = True
