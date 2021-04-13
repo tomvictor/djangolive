@@ -40,6 +40,20 @@ Install djangolive by running::
 
     pip install djangolive
 
+Usage
+-----
+
+Add the following line to ``settings.py``::
+
+    djangolive.apps.activeuser
+
+
+Add the following line to MIDDLEWARE in ``settings.py``::
+
+    djangolive.apps.activeuser.middleware.ActivityMiddleware
+ 
+ 
+
 Contribute
 ----------
 
