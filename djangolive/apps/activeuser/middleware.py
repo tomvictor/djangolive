@@ -2,7 +2,7 @@ from .models import ActiveUserLog, UserActivityHistory
 from django.utils import timezone
 from django.conf import settings
 
-ACTIVITY_HISTORY_ENABLED = settings.get("ACTIVITY_HISTORY_ENABLED", True)
+ACTIVITY_HISTORY_ENABLED = getattr(settings, "ACTIVITY_HISTORY_ENABLED", True)
 
 
 class ActivityMiddleware:
