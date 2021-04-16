@@ -10,7 +10,7 @@ djangolive (Under development)
     
 
 .. image:: https://sonarcloud.io/api/project_badges/quality_gate?project=Tomvictor_djangolive
-    :target: https://sonarcloud.io/dashboard?id=Tomvictor_djangolive
+    :target: https://sonarcloud.io/api/project_badges/measure?project=Tomvictor_djangolive&metric=alert_status
 
 
 djangolive package is basically a bunch of beautifully  crafted apps. It can also be considered
