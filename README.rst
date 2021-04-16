@@ -1,5 +1,5 @@
-djangolive (Under development)
-==============================
+djangolive
+==========
 
 .. image:: https://readthedocs.org/projects/djangoiot/badge/?version=latest
     :target: https://djangolive.readthedocs.io/en/latest/?badge=latest
