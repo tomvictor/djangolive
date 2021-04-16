@@ -7,6 +7,10 @@ djangolive (Under development)
 
 .. image:: https://travis-ci.org/Tomvictor/djangolive.svg?branch=master
     :target: https://travis-ci.org/Tomvictor/djangolive
+    
+
+.. image:: https://sonarcloud.io/api/project_badges/quality_gate?project=Tomvictor_djangolive
+    :target: https://sonarcloud.io/dashboard?id=Tomvictor_djangolive
 
 
 djangolive package is basically a bunch of beautifully  crafted apps. It can also be considered
