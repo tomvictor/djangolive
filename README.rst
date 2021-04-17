@@ -44,18 +44,34 @@ Install djangolive by running::
 
     pip install djangolive
 
-Usage
------
 
-Add the following line to ``settings.py``::
+Configuration
+-------------
 
-    djangolive.apps.activeuser
+We need to hook ``djangolive`` into our project.
 
+1. Put ``djangolive.apps.activeuser`` into your ``INSTALLED_APPS`` at settings module:
 
-Add the following line to MIDDLEWARE in ``settings.py``::
+.. code:: python
 
-    djangolive.apps.activeuser.middleware.ActivityMiddleware
- 
+    INSTALLED_APPS = (
+     ...
+     'djangolive.apps.activeuser',
+    )
+
+2. Add extra middleware backend to your ``settings.py``:
+
+.. code:: python
+
+    MIDDLEWARE = [
+    "...",
+    "apps.activeuser.middleware.ActivityMiddleware",
+    ]
+
+3. Create ``djangolive`` database tables by running::
+
+     python manage.py migrate
+     
  
 
 Contribute
