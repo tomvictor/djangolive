@@ -42,7 +42,7 @@ master_doc = "index"
 
 setup(
     name="djangolive",
-    version="0.0.1",
+    version="0.0.2",
     url="https://github.com/tomvictor/djangolive",
     license="MIT",
     description="Track Django users alive",
