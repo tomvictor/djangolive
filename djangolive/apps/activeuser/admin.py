@@ -18,9 +18,9 @@ class ActiveUserLogFilter(admin.SimpleListFilter):
             ("30", "30 Minutes"),
             ("45", "45 Minutes"),
             ("60", "1 Hour"),
-            (str(60*6), "6 Hour"),
-            (str(60*12), "12 Hour"),
-            (str(60*24), "24 Hour"),
+            (str(60 * 6), "6 Hour"),
+            (str(60 * 12), "12 Hour"),
+            (str(60 * 24), "24 Hour"),
         )
 
     def queryset(self, request, queryset):
