@@ -1,4 +1,4 @@
-from .interfaces import AbsBaseStrategy, DefaultStrategy
+from .interfaces import DefaultCommand
 from typing import List
 
 
@@ -15,7 +15,7 @@ def perform_strategy(command: str, view, request, command_map):
     else:
         params = {}
 
-    command_cls = command_map.setdefault(command, DefaultStrategy)
+    command_cls = command_map.setdefault(command, DefaultCommand)
     command = command_cls(view, request, **params)
     command.execute()
     return command
