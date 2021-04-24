@@ -9,6 +9,7 @@ def time_profile(func):
         * Do not use this in production
 
     """
+
     @functools.wraps(func)
     def profile(*args, **kwargs):
         start = time.time()

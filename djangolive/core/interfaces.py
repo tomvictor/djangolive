@@ -47,3 +47,20 @@ class DefaultStrategy(AbsBaseStrategy):
 
     def execute(self, *args, **kwargs):
         pass
+
+
+class AbsBaseCommand(metaclass=abc.ABCMeta):
+    @property
+    @abc.abstractmethod
+    def name(self):
+        pass
+
+    @property
+    @abc.abstractmethod
+    def strategy(self):
+        pass
+
+
+class DefaultCommand(AbsBaseCommand):
+    name = "default_cmd"
+    strategy = DefaultStrategy

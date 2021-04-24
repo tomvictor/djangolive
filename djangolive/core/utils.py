@@ -1,12 +1,12 @@
-from .interfaces import AbsBaseStrategy, DefaultStrategy
+from .interfaces import DefaultCommand
 from typing import List
 
 
-def generate_strategy_map(strategies: List[AbsBaseStrategy]):
-    return dict([cls.name, cls] for cls in strategies)
+def generate_command_map(commands: List):
+    return dict([cls.name, cls] for cls in commands)
 
 
-def perform_strategy(strategy, view, request, strategy_map):
+def perform_strategy(command: str, view, request, command_map):
     data = request.data
     if isinstance(data, list):
         params = {"data": data}
@@ -15,7 +15,7 @@ def perform_strategy(strategy, view, request, strategy_map):
     else:
         params = {}
 
-    strategy_cls = strategy_map.setdefault(strategy, DefaultStrategy)
-    strategy = strategy_cls(view, request, **params)
-    strategy.execute()
-    return strategy
+    command_cls = command_map.setdefault(command, DefaultCommand)
+    command = command_cls(view, request, **params)
+    command.execute()
+    return command
